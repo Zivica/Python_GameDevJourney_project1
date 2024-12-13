@@ -20,3 +20,57 @@ This project is a learning exercise focused on manipulating and animating sprite
 
 - Python
 - Pygame
+
+1. Install dependencies:
+
+pip install pygame
+
+2. Run the project:
+
+python3 main.py
+
+## Controls
+
+- **Move Left**: `A`
+- **Move Right**: `D`
+- **Attack 1**: `J`
+- **Attack 2**: `K`
+- **Attack 3**: `L`
+
+---
+
+## Project Structure
+
+```plaintext
+├── assets/
+│   ├── Samurai/
+│   │   ├── Run.png          # Running animation (8 frames)
+│   │   ├── Idle.png         # Idle animation (4 frames)
+│   │   ├── Attack_1.png     # Attack 1 animation (6 frames)
+│   │   ├── Attack_2.png     # Attack 2 animation (4 frames)
+│   │   ├── Attack_3.png     # Attack 3 animation (4 frames)
+├── main.py                  # Main project file
+├── README.md                # Project documentation
+```
+
+## Learning Objectives
+
+This project is designed for beginners who want to:
+- Learn how to load and manipulate sprite sheets.
+- Understand how to animate sprites frame by frame.
+- Gain experience handling user input for movement and actions.
+- Implement and manage transitions between various animation states like idle, running, and attacking.
+- Experiment with directional sprite flipping for movement.
+
+---
+
+## Credits
+
+- **Sprites**: Free assets sourced from [Craftpix.net](https://craftpix.net/).
+- **Framework**: Built with [Pygame](https://www.pygame.org/).
+
+---
+
+## License
+
+This project is for educational purposes. The sprite assets belong to [Craftpix.net](https://craftpix.net/) and are subject to their terms of use.
