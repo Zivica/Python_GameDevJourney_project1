@@ -43,6 +43,9 @@ python3 main.py
 
 ```plaintext
 ├── assets/
+|   ├── Dummy/
+|   │   ├── Idle.png         # Idle animation of a dummy (4 frames)
+│   │   ├── Hurt.png         # Hurt animation after rect collision (3 frames)
 │   ├── Samurai/
 │   │   ├── Run.png          # Running animation (8 frames)
 │   │   ├── Idle.png         # Idle animation (4 frames)
