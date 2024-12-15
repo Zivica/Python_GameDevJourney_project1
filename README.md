@@ -38,9 +38,9 @@ python3 main.py
 - **Attack 2**: `K`
 - **Attack 3**: `L`
 ### To be made
-- **Jump**: 'W'
-- **Force slow walk**: 'S'
-- **Parry/Block**: 'Spacebar'
+- **Jump**: `W`
+- **Force slow walk**: `S`
+- **Parry/Block**: `Spacebar`
 
 ## Project Structure
 
