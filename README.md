@@ -31,13 +31,16 @@ python3 main.py
 
 ## Controls
 
+### Functional commands
 - **Move Left**: `A`
 - **Move Right**: `D`
 - **Attack 1**: `J`
 - **Attack 2**: `K`
 - **Attack 3**: `L`
-
----
+### To be made
+- **Jump**: 'W'
+- **Force slow walk**: 'S'
+- **Parry/Block**: 'Spacebar'
 
 ## Project Structure
 
