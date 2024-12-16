@@ -11,9 +11,10 @@ FPS = 60  # Frames per second
 CH_WIDTH = 300
 CH_HEIGHT = 300
 CH_SPEED = 300  # Pixels per second
-HURT_DURATION = 1.0
+HURT_DURATION = 0.8
 
 WHITE = (255, 255, 255)
+# -------------------------------------------
 
 screen = pygame.display.set_mode((SCREEN_W, SCREEN_H))
 pygame.display.set_caption("Game Window")
@@ -42,7 +43,7 @@ def draw_sPlayer(x, y, frame, facing_left):
 def draw_sDummy(x, y, frame, facing_left):
     # If you want the dummy to face a particular direction, control it here.
     # For now, we won't flip to avoid confusion:
-    # frame = pygame.transform.flip(frame, True, False)  # Remove flipping if not desired
+    frame = pygame.transform.flip(frame, True, False)  # Remove flipping if not desired
     screen.blit(frame, (x, y))
 
 
@@ -161,11 +162,12 @@ def main():
         # Define the sword's attack hit box ONLY if attacking
         if is_attacking:
             if facing_left:
-                attack_hitbox = pygame.Rect(player_x - 50, player_y + 100, 50, 100)
+                attack_hitbox = pygame.Rect(player_x, player_y + 200, 120, 50)
             else:
-                attack_hitbox = pygame.Rect(player_x + CH_WIDTH, player_y + 100, 50, 100)
+                attack_hitbox = pygame.Rect(player_x+170, player_y + 200, 120, 50)
 
-            dummy_rect = pygame.Rect(dummy_x, dummy_y, CH_WIDTH, CH_HEIGHT)
+            dummy_rect = pygame.Rect(dummy_x+125, dummy_y + 125, CH_WIDTH - 235, CH_HEIGHT)
+            # player_rect = pygame.Rect(player_x,player_y, CH_WIDTH,CH_HEIGHT)
 
             if dummy_state == "idle" and attack_hitbox.colliderect(dummy_rect):
                 dummy_state = "hurt"
@@ -188,6 +190,7 @@ def main():
         # Debug rectangle for attack hitbox (only when attacking)
         if is_attacking:
             pygame.draw.rect(screen, (255, 0, 0, 100), attack_hitbox, 2)
+            pygame.draw.rect(screen, (255, 0, 0, 100), dummy_rect, 2)
 
         pygame.display.update()
 
